@@ -1,4 +1,4 @@
-mport matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 import numpy as np
 from scipy.interpolate import CubicSpline
 z=np.loadtxt('data.txt.txt')
@@ -6,9 +6,9 @@ G=CubicSpline(z[:,0],z[:,1])
 x=z[:,0]
 y=[]
 for k in range(len(x)):
-    y.append(F(x[k]))
+    y.append(G(x[k]))
     fig,ax=plt.subplots(1,2)
-    ax[0].scatter(z[:,0],z[:,1],c="red")
+    ax[0].scatter(z[:,0],z[:,1],)
 
     ax[0].set_title("Curve of Data Point")
     ax[1].plot(x,y)
